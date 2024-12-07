@@ -10,12 +10,10 @@ import jakarta.inject.Inject;
 @ApplicationScoped
 public class AMQMessagingApplication {
 
-    @Inject
-    @Channel("user12-cola-out")
+    
     Emitter<String> emitter;
 
-    @Inject
-    @Channel("user12-topico-out")
+    
     Emitter<String> emitterTopic;
 
     
@@ -26,12 +24,12 @@ public class AMQMessagingApplication {
     /**
      * Consume the uppercase channel (in-memory) and print the messages.
      **/
-    @Incoming("user12-cola")
+   
     public void leerMensaje(String word) {
         System.out.println(">> " + word);
     }
 
-    @Incoming("user12-topico")
+   
     public void leerMensajeTopico(String mensaje) {
         System.out.println("Mensaje desde topico >> " + mensaje);
     }
