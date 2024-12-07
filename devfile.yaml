@@ -40,7 +40,7 @@ components:
           value: '5858'
   - name: m2
     volume:
-      size: 3Gi
+      size: 1Gi
 commands:
   - id: init-compile
     exec:
@@ -65,6 +65,3 @@ commands:
         kind: debug
         isDefault: true
       workingDir: ${PROJECT_SOURCE}
-events:
-  postStart:
-    - init-compile
