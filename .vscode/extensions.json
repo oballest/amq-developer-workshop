@@ -1,5 +1,7 @@
 {
     "recommendations": [
-      "redhat.java"
+      "redhat.java",
+      "redhat.vscode-quarkus",
+      "redhat.vscode-yaml"
     ]
   }
