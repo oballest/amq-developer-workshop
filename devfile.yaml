@@ -14,6 +14,9 @@ components:
       image: registry.redhat.io/amq7/amq-broker-rhel8@sha256:0f443f5aa818dd85bfa93e51e37bdac3909628a283aa52a89125b527dd75d9aa
       memoryLimit: 512M
       memoryRequest: 256M
+      command:
+        - /bin/bash
+      args: ['tail', '-f', '/dev/null']
     name: amq
   - container:
       cpuLimit: '4'
