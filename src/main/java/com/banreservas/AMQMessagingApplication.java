@@ -37,4 +37,9 @@ public class AMQMessagingApplication {
     public void enviarMensajeTopico(String mensaje){
         emitterTopic.send(mensaje);
     }
+
+    //c@Incoming("cola-segura")
+    public void leerMensajeColaSegura(String mensaje){
+        System.out.println("Mensaje desde cola segura >> " + mensaje);
+    }
 }
