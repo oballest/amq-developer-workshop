@@ -10,10 +10,10 @@ attributes:
 components:
   - container: 
       cpuLimit: '1'
-      cpuRequest: '0.25'
+      cpuRequest: '1'
       image: registry.redhat.io/amq7/amq-broker-rhel8@sha256:0f443f5aa818dd85bfa93e51e37bdac3909628a283aa52a89125b527dd75d9aa
-      memoryLimit: 8G
-      memoryRequest: 4G
+      memoryLimit: 512M
+      memoryRequest: 256M
     name: amq
   - container:
       cpuLimit: '4'
